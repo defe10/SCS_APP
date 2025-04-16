@@ -1,0 +1,88 @@
+/* Asegura que el body use toda la altura */
+html, body {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hero {
+  background-color: #2f354a;
+}
+
+.contenido {
+  background-color: #2f354a;
+}
+
+
+/* Título principal */
+
+
+.titulo h1 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 10px;
+  padding-left: 20px;
+  line-height: 0.9;
+}
+
+.titulo h2 {
+  text-align: left;
+  font-weight: lighter;
+  font-size: 40px;
+  padding-left: 20px;
+  line-height: 0.9;
+  margin-top: 0px;
+}
+
+.pregunta {
+  font-size:larger !important;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cuadro que contiene los botones */
+.cuadro {
+  max-width: 300px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Espaciado entre botones */
+.opciones a {
+  margin-bottom: 5px;
+}
+
+
+.pregunta {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: white;
+}
+
+
+/* Botones grandes personalizados */
+.btn-lg {
+  font-size: 1rem !important;
+  padding: 0.8rem !important;
+  line-height: 0.5 !important;
+  border-radius: 0.75rem;
+}
+
+/* En móvil: sin bordes ni margen */
+@media (min-width: 768px) {
+  .contenido {
+  max-width: 500px;
+  max-height: 1000px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  } 
+}

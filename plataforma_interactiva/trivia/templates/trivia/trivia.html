@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia Cine Salta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="hero text-white text-center d-flex justify-content-center align-items-center vh-100">
+
+  <section class="contenido w-100">
+    <div class="container">
+      <div class="cuadro p-3 mx-auto">
+
+        {# --- SIN PREGUNTAS --- #}
+        {% if estado == "sin_preguntas" %}
+          <h2 class="mb-4">⚠️ No hay preguntas disponibles</h2>
+          <a href="/" class="btn btn-primary btn-lg w-100 mt-3">Volver al menú</a>
+
+        {# --- RESUMEN FINAL --- #}
+        {% elif estado == "resumen" %}
+          <h2 class="mb-4">¡Terminaste la trivia!</h2>
+          <p class="lead">Respondiste correctamente <strong>{{ score }}</strong> de <strong>{{ total }}</strong> preguntas.</p>
+          <div class="d-grid gap-3 mt-4">
+            <a href="{% url 'trivia:comenzar' %}" class="btn btn-primary btn-lg w-100">Reiniciar trivia</a>
+            <a href="/" class="btn btn-primary btn-lg w-100">Volver al menú</a>
+          </div>
+
+        {# --- PREGUNTA O RESULTADO INTERMEDIO --- #}
+        {% else %}
+
+          {% if pregunta %}
+            <h3 class="pregunta mb-4">{{ pregunta.texto }}</h3>
+
+            <img
+              src="{% static 'img/' %}{{ pregunta.id }}.png"
+              alt="Imagen trivia {{ pregunta.id }}"
+              class="img-fluid mb-4"
+              style="max-height:250px;"
+            >
+
+            <form method="post">
+              {% csrf_token %}
+              <div class="d-grid gap-3">
+                {% for opcion in pregunta.opciones.all %}
+                  <button
+                    type="submit"
+                    name="opcion"
+                    value="{{ opcion.id }}"
+                    class="btn btn-lg w-100 {% cycle 'btn-primary' 'btn-success' 'btn-warning text-dark' 'btn-info text-dark' %}"
+                  >
+                    {{ opcion.texto }}
+                  </button>
+                {% endfor %}
+              </div>
+            </form>
+          {% endif %}
+
+          {% if correcta is not none %}
+            <div class="mt-4">
+              {% if correcta %}
+                <p class="fs-4"><strong>✅ ¡Respuesta correcta!</strong></p>
+              {% else %}
+                <p class="fs-4"><strong>❌ Respuesta incorrecta</strong></p>
+              {% endif %}
+            </div>
+
+            <div class="d-grid gap-3 mt-4">
+              {% if siguiente_id %}
+                <a href="{% url 'trivia:pregunta' siguiente_id %}" class="btn btn-success btn-lg w-100">Siguiente pregunta</a>
+              {% else %}
+                <a href="{% url 'trivia:resumen' %}" class="btn btn-success btn-lg w-100">Ver resultado</a>
+              {% endif %}
+              <a href="/" class="btn btn-warning text-dark btn-lg w-100">Volver al menú</a>
+            </div>
+          {% endif %}
+
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
