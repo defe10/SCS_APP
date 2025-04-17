@@ -1,9 +1,9 @@
 from django.contrib import admin
 from .models import Pregunta, Opcion
 
-class OpcionInline(admin.TabularInline):  # o admin.StackedInline si preferís
+class OpcionInline(admin.TabularInline): 
     model = Opcion
-    extra = 3  # cuántas opciones vacías aparecen por defecto
+    extra = 3  # <---- cantidad de opciones de respuesta
 
 class PreguntaAdmin(admin.ModelAdmin):
     inlines = [OpcionInline]

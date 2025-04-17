@@ -19,12 +19,10 @@
     <div class="container">
       <div class="cuadro p-3 mx-auto">
 
-        {# --- SIN PREGUNTAS --- #}
-        {% if estado == "sin_preguntas" %}
-          <h2 class="mb-4">⚠️ No hay preguntas disponibles</h2>
+        {% if estado == "sin_preguntas" %}  
+          <h2 class="mb-4">⚠️ No hay preguntas</h2>
           <a href="/" class="btn btn-primary btn-lg w-100 mt-3">Volver al menú</a>
 
-        {# --- RESUMEN FINAL --- #}
         {% elif estado == "resumen" %}
           <h2 class="mb-4">¡Terminaste la trivia!</h2>
           <p class="lead">Respondiste correctamente <strong>{{ score }}</strong> de <strong>{{ total }}</strong> preguntas.</p>
@@ -33,7 +31,6 @@
             <a href="/" class="btn btn-primary btn-lg w-100">Volver al menú</a>
           </div>
 
-        {# --- PREGUNTA O RESULTADO INTERMEDIO --- #}
         {% else %}
 
           {% if pregunta %}
@@ -66,9 +63,12 @@
           {% if correcta is not none %}
             <div class="mt-4">
               {% if correcta %}
-                <p class="fs-4"><strong>✅ ¡Respuesta correcta!</strong></p>
+                <p class="fs-4"><strong>😎 ¡Respuesta correcta!</strong></p>
               {% else %}
-                <p class="fs-4"><strong>❌ Respuesta incorrecta</strong></p>
+                <p class="fs-4"><strong>👎 Respuesta incorrecta</strong></p>
+                {% if mensaje_error %}
+                  <p class="mensaje-error mt-2"><em>{{ mensaje_error }}</em></p>
+                {% endif %}
               {% endif %}
             </div>
 

@@ -17,7 +17,7 @@
   
 <section class= "contenido">
   <div class="titulo">
-    <h1>SEMANA <br>DE CINE</h1>
+    <h1 class="mb-0">SEMANA <br>DE CINE</h1>
     <h2>EN SALTA</h2>
   </div>
 
@@ -26,25 +26,23 @@
   </div>
 
 
-    <div class="cuadro p-3">
+  <div class="cuadro p-3">
     <div class="row">
       <div class="opciones col-12 g-3">
         <a href="{% url 'trivia:comenzar' %}" class="btn btn-primary btn-lg w-100">Trivias</a>
         <a href="{% url 'votacion:lista_peliculas' %}" class="btn btn-success btn-lg w-100">Voto del público</a>
         <a href="{% url 'encuesta:lista_preguntas' %}" class="btn btn-warning btn-lg text-dark w-100">Participa de encuestas</a>
-        <a href="https://saltacine.gob.ar" target="_blank" class="btn btn-info btn-lg text-dark w-100">
-          Programación
-        </a>
+        <a href="https://saltacine.gob.ar" target="_blank" class="btn btn-info btn-lg text-dark w-100">Programación</a>
       </div>
-
     </div>
-    
-  </section>
+  </div>
 
-  <footer>
+  <div class="imagen mb-2">
+    <img src="{% static 'img/SEC DE CULTURA - BLANCO.png' %}" alt="logo" width="150" height="auto">
+  </div>
 
 
-  </footer>
+</section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

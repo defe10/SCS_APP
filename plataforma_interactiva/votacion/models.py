@@ -20,7 +20,7 @@ class Voto(models.Model):
     valor = models.CharField(max_length=1, choices=OPCIONES_VOTO)
 
     class Meta:
-        unique_together = ('usuario', 'pelicula')  # Solo un voto por usuario por película
+        unique_together = ('usuario', 'pelicula')  # <------ Solo un voto por usuario por película
 
     def __str__(self):
         return f'{self.usuario.username} votó {self.get_valor_display()} a {self.pelicula.titulo}'
