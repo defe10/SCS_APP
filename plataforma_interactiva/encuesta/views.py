@@ -20,5 +20,5 @@ def votar(request, pregunta_id):
         if not VotoEncuesta.objects.filter(usuario=request.user, pregunta=pregunta).exists():
             VotoEncuesta.objects.create(usuario=request.user, pregunta=pregunta, valor=valor)
         return redirect('encuesta:lista_preguntas')
-    return render(request, 'encuesta/votar.html', {'pregunta': pregunta})
+    return render(request, 'encuesta/votar_encuesta.html', {'pregunta': pregunta})
 

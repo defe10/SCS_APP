@@ -9,9 +9,10 @@ class PreguntaEncuesta(models.Model):
 
 class VotoEncuesta(models.Model):
     OPCIONES = [
-        ('1', 'No estoy de acuerdo'),
-        ('2', 'Neutral'),
-        ('3', 'Estoy de acuerdo'),
+        ('1', 'No me gustó'),
+        ('2', 'Me gustó poco'),
+        ('3', 'Me gustó'),
+        ('4', 'Me gustó mucho'),
     ]
 
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name='votos_encuesta')

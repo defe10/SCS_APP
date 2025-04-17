@@ -22,9 +22,10 @@
         <form method="post">
           {% csrf_token %}
           <div class="d-grid gap-3 mb-4">
-            <button type="submit" name="valor" value="1" class="btn btn-lg w-100 btn-danger">No estoy de acuerdo</button>
-            <button type="submit" name="valor" value="2" class="btn btn-lg w-100 btn-warning text-dark">Neutral</button>
-            <button type="submit" name="valor" value="3" class="btn btn-lg w-100 btn-success">Estoy de acuerdo</button>
+            <button type="submit" name="valor" value="1" class="btn btn-lg w-100 btn-danger">No me gustó</button>
+            <button type="submit" name="valor" value="2" class="btn btn-lg w-100 btn-warning text-dark">Me gustó poco</button>
+            <button type="submit" name="valor" value="3" class="btn btn-lg w-100 btn-success">Me gustó</button>
+            <button type="submit" name="valor" value="3" class="btn btn-lg w-100 btn-primary">Me gustó mucho</button>
           </div>
           <a href="{% url 'encuesta:lista_preguntas' %}" class="btn btn-outline-light w-100">Volver a la encuesta</a>
         </form>
