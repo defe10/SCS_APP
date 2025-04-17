@@ -75,6 +75,21 @@ html, body {
   border-radius: 0.75rem;
 }
 
+a {
+  z-index: 10;
+  position: relative;
+}
+
+a.btn {
+  z-index: 10;
+  position: relative;
+}
+
+.contenido {
+  position: relative;
+  z-index: 5;
+}
+
 /* En móvil: sin bordes ni margen */
 @media (min-width: 768px) {
   .contenido {

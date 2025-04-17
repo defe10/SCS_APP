@@ -32,6 +32,11 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'usuario',
+    'inicio',
+    'trivia',
+    'votacion',
+    'encuesta',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,9 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sites', #<------ login allauth
     'allauth',
     'allauth.account',
-
-    'inicio',
-    'trivia',
 ]
 
 MIDDLEWARE = [

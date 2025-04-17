@@ -23,4 +23,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')), 
     path('', include('inicio.urls')),            
     path('trivia/', include('trivia.urls', namespace='trivia')),
+    path('votacion/', include('votacion.urls', namespace='votacion')),
+    path('encuesta/', include('encuesta.urls', namespace='encuesta')),
 ]

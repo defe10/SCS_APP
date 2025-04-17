@@ -30,9 +30,11 @@
     <div class="row">
       <div class="opciones col-12 g-3">
         <a href="{% url 'trivia:comenzar' %}" class="btn btn-primary btn-lg w-100">Trivias</a>
-        <a href="" class="btn btn-success btn-lg w-100">Voto del público</a>
-        <a href="" class="btn btn-warning btn-lg text-dark w-100">Participa de encuestas</a>
-        <a href="" class="btn btn-info btn-lg text-dark w-100">Programación</a>
+        <a href="{% url 'votacion:lista_peliculas' %}" class="btn btn-success btn-lg w-100">Voto del público</a>
+        <a href="{% url 'encuesta:lista_preguntas' %}" class="btn btn-warning btn-lg text-dark w-100">Participa de encuestas</a>
+        <a href="https://saltacine.gob.ar" target="_blank" class="btn btn-info btn-lg text-dark w-100">
+          Programación
+        </a>
       </div>
 
     </div>
