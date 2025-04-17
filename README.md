@@ -1,12 +1,11 @@
-# PLATAFORMA INTERACTIVA
-29º Semana de Cine en Salta
+# PLATAFORMA INTERACTIVA 
 Desarrollado por: Federico Casoni
 
 
-La Plataforma Interactiva para la 29º Semana de Cine en Salta es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival de cine.
+La Plataforma Interactiva es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival cinematográfico **29º Semana de Cine en Salta**
 A través de un sitio web accesible desde dispositivos móviles,los usuarios pueden participar en actividades interactivas como trivias, votaciones y encuestas, fomentando su involucramiento y proporcionando datos valiosos 
 para los organizadores del evento. Además podrán acceder a la programción del festival.
-La plataforma se accede escaneando un código QR, lo que garantiza una experiencia rápida y sencilla.
+Se accede a la plataforma escaneando un código QR, lo que garantiza una experiencia rápida y sencilla.
 
 
 # FUNCIONALIDADES:
