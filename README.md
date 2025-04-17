@@ -2,7 +2,7 @@
 Desarrollado por: Federico Casoni
 
 
-La Plataforma Interactiva es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival cinematográfico **29º Semana de Cine en Salta**
+La Plataforma Interactiva es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival cinematográfico **29º Semana de Cine en Salta.**
 A través de un sitio web accesible desde dispositivos móviles,los usuarios pueden participar en actividades interactivas como trivias, votaciones y encuestas, fomentando su involucramiento y proporcionando datos valiosos 
 para los organizadores del evento. Además podrán acceder a la programción del festival.
 Se accede a la plataforma escaneando un código QR, lo que garantiza una experiencia rápida y sencilla.
@@ -28,7 +28,6 @@ Se accede a la plataforma escaneando un código QR, lo que garantiza una experie
    
 
 # TECNOLOGÍA
-
   - Django 5.1
   - Bootstrap 5
   - HTML + CSS personalizado
@@ -36,17 +35,15 @@ Se accede a la plataforma escaneando un código QR, lo que garantiza una experie
 
 
 # LOGIN
-
   - Requiere email, nombre de usuario y contraseña, para que no voten más de una vez.
 
 
 # PARA QUE FUNCIONE:
-
   - git clone https://github.com/tuusuario/scs_app.git
   - cd scs_app
   - python -m venv env
   - source env/bin/activate 
-  - pip install -r requirements.txt
+  - pip install -r requirements.txt 
   - python manage.py migrate
   - python manage.py createsuperuser
   - python manage.py runserver
