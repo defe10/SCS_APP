@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Pregunta
 
 
+# Inicio con dos variables para contar el puntaje
 
 def comenzar_trivia(request):        
     request.session['score'] = 0
@@ -19,7 +20,7 @@ def comenzar_trivia(request):
 
 
 
-
+# Pregunta con opciones
 
 
 def pregunta(request, pregunta_id):     #<--- si hay pregunta, carga la pregunta con todas las opciones. 
@@ -62,7 +63,7 @@ def pregunta(request, pregunta_id):     #<--- si hay pregunta, carga la pregunta
 
 
 
-
+# Toma las variables del inicio y renderiza
 
 
 def resumen(request):

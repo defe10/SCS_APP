@@ -34,7 +34,7 @@
         {% else %}
 
         <div class="titulo_trivia">
-          <h2 class="mb-0"><strong>¿Cúanto sabes de cine salteño? 🎬 </strong></h2>
+          <h2 class="mb-0">¿Cúanto sabes de cine salteño? 🎬</h2>
         </div>
 
           {% if pregunta %}
@@ -78,11 +78,11 @@
 
             <div class="d-grid gap-2 mt-4">
               {% if siguiente_id %}
-                <a href="{% url 'trivia:pregunta' siguiente_id %}" class="btn btn-success btn-lg w-100">Siguiente pregunta</a>
+                <a href="{% url 'trivia:pregunta' siguiente_id %}" class="btn btn-outline-light btn-lg w-100">Siguiente pregunta</a>
               {% else %}
                 <a href="{% url 'trivia:resumen' %}" class="btn btn-success btn-lg w-100">Ver resultado</a>
               {% endif %}
-              <a href="/" class="btn btn-warning text-dark btn-lg w-100">Volver al menú</a>
+              <a href="/" class="btn btn-outline-light btn-lg w-100">Volver al menú</a>
             </div>
           {% endif %}
 
