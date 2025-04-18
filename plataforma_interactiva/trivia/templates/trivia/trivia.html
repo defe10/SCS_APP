@@ -22,10 +22,24 @@
         {% if estado == "sin_preguntas" %}  
           <h2 class="mb-4">⚠️ No hay preguntas</h2>
           <a href="/" class="btn btn-primary btn-lg w-100 mt-3">Volver al menú</a>
-        {% elif estado == "resumen" %}
+        
+          {% comment %} Mensaje final {% endcomment %}
+          {% elif estado == "resumen" %}
 
           <h2 class="mb-4">¡Terminaste la trivia!</h2>
           <p class="lead">Respondiste correctamente <strong>{{ score }}</strong> de <strong>{{ total }}</strong> preguntas.</p>
+          
+
+          {% comment %} Mensaje sobre el puntaje final {% endcomment %}
+          
+          {% if total <= 4 %}
+            <p class="resp_trivia">😭 ¡Ni suerte tuviste!</p>
+          {% elif total <= 8 %}
+            <p class="resp_trivia">😏 Se nota que algo sabes</p>
+          {% else %}
+            <p class="resp_trivia">¡Eres una eminencia del cine salteño! 🎬 </p>
+          {% endif %}
+
           <div class="d-grid gap-2 mt-4">
             <a href="{% url 'trivia:comenzar' %}" class="btn btn-primary btn-lg w-100">¿Otra vez?</a>
             <a href="/" class="btn btn-primary btn-lg w-100">Volver al menú</a>
@@ -37,9 +51,13 @@
           <h2 class="mb-0">¿Cúanto sabes de cine salteño? 🎬</h2>
         </div>
 
+
+        {% comment %} pregunta {% endcomment %}
           {% if pregunta %}
             <h3 class="pregunta mb-4">{{ pregunta.texto }}</h3>
 
+            
+        {% comment %} foto con id de pregunta {% endcomment %}
             <img
               src="{% static 'img/' %}{{ pregunta.id }}.png"
               alt="Imagen trivia {{ pregunta.id }}"

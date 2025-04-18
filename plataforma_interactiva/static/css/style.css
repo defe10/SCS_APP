@@ -118,6 +118,12 @@ a.btn {
   font-size: 1.1rem;
 }
 
+.resp_trivia {
+  color: #07E066 ;
+  font-size:x-large;
+  font-weight: 600;
+}
+
 /* En móvil: sin bordes ni margen */
 @media (min-width: 768px) {
   .contenido {

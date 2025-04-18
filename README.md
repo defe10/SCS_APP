@@ -50,7 +50,3 @@ Se accede a la plataforma escaneando un código QR, lo que garantiza una experie
 
 # CAPTURAS
 
-![Captura de pantalla 2025-04-17 a la(s) 6 15 04 p  m](https://github.com/user-attachments/assets/17956891-2cba-4912-a667-6501c642ff36)
-![Captura de pantalla 2025-04-17 a la(s) 6 15 17 p  m](https://github.com/user-attachments/assets/ae1dd43a-43ed-4711-85af-b1e616bad0d1)
-![Captura de pantalla 2025-04-17 a la(s) 6 15 46 p  m](https://github.com/user-attachments/assets/7fe2f85e-29fa-4091-b4b9-b53c39715da5)
-![Captura de pantalla 2025-04-17 a la(s) 6 16 05 p  m](https://github.com/user-attachments/assets/d9170a9b-b94c-494a-9c52-026fb2409167)
