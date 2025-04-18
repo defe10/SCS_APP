@@ -43,14 +43,28 @@ html, body {
   height: auto;
 }
 
-/* Cuadro que contiene los botones */
+.titulo_trivia {
+  background-color: #DE5C9D;
+  margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  
+}
+
+.titulo_trivia h2 {
+  line-height: 1;
+  
+}
+
 .cuadro {
   max-width: 300px;
   width: 100%;
   padding: 0 20px;
 }
 
-/* Espaciado entre botones */
+
 .opciones a {
   margin-bottom: 5px;
 }
@@ -65,7 +79,7 @@ html, body {
 }
 
 
-/* Botones grandes personalizados */
+
 .btn-lg {
   font-size: 1rem !important;
   padding: 0.8rem !important;
@@ -91,7 +105,6 @@ a.btn {
 .mensaje-error {
   color: #ffc107;
   font-size: 1.1rem;
-  /* font-style: italic; */
 }
 
 /* En móvil: sin bordes ni margen */

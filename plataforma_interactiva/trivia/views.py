@@ -9,7 +9,7 @@ def comenzar_trivia(request):
 
     primera = Pregunta.objects.order_by('id').first()   
 
-    if primera is None:
+    if primera is None:  #<----- manejo de errores
         return render(request, 'trivia/trivia.html', {
             'estado': 'sin_preguntas'
         })
@@ -22,11 +22,11 @@ def comenzar_trivia(request):
 
 
 
-def pregunta(request, pregunta_id):
+def pregunta(request, pregunta_id):     #<--- si hay pregunta, carga la pregunta con todas las opciones. 
     pregunta = get_object_or_404(Pregunta, pk=pregunta_id)
     opciones = pregunta.opciones.all()
 
-    if request.method == 'POST':
+    if request.method == 'POST': #<--- con .method distinge si es get o post, si es post verifica si es correcta
         opcion_id = request.POST.get('opcion')
         seleccion = pregunta.opciones.filter(id=opcion_id).first()
         correcta = bool(seleccion and seleccion.es_correcta)
@@ -69,8 +69,20 @@ def resumen(request):
     score = request.session.get('score', 0)
     total = request.session.get('total', 0)
     return render(request, 'trivia/trivia.html', {
-        'estado': 'resumen',
+        'estado': 'resumen', 
         'score': score,
         'total': total,
     })
 
+
+
+
+# request.user: es el usuario que está logueado
+
+# request.method: GET (ver el formulario) o  POST (enviar respuesta). Sería el tipo de request
+
+# request.POST.get(): se envió el formulario y accede
+
+# redirect(): redirige al usuario a otra vista.
+
+# render(): muestra una página con contenido dinámico.

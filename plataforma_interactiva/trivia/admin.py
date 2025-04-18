@@ -7,6 +7,6 @@ class OpcionInline(admin.TabularInline):
 
 class PreguntaAdmin(admin.ModelAdmin):
     inlines = [OpcionInline]
-    list_display = ['texto']  # ajustalo si usás otro campo
+    list_display = ['texto']  
 
 admin.site.register(Pregunta, PreguntaAdmin)

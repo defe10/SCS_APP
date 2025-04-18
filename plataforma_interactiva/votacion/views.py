@@ -12,6 +12,13 @@ def lista_peliculas(request):
         'peliculas_votadas': peliculas_votadas
     })
 
+
+
+
+
+
+
+
 @login_required
 def votar_pelicula(request, pelicula_id):
     pelicula = get_object_or_404(Pelicula, id=pelicula_id)
