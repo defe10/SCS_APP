@@ -1,5 +1,5 @@
 # PLATAFORMA INTERACTIVA 
-Desarrollado por: Federico Casoni
+Desarrollado por: Federico Casoni en el curso "Introducción a la programación en Python" en el Instituto de Innovación y Tecnología Aplicada - IITA 2025. Prof. Nicolás Martinelli.
 
 
 La Plataforma Interactiva es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival cinematográfico **29º Semana de Cine en Salta.**
@@ -11,7 +11,7 @@ Se accede a la plataforma escaneando un código QR, lo que garantiza una experie
 # FUNCIONALIDADES:
 
 1. Trivias:
-   - Preguntas sobre el cine salteño.
+   - Preguntas sobre cine salteño.
    - Muestra una pregunta a la vez con imagen de la película que hacer referencia la pregunta
    - Los usuarios reciben retroalimentación inmediata y pueden jugar varias trivias.
    - Puntaje con resumen final
