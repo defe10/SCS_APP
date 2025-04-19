@@ -1,5 +1,5 @@
 # PLATAFORMA INTERACTIVA 
-Desarrollado por: Federico Casoni en el curso "Introducción a la programación en Python" en el Instituto de Innovación y Tecnología Aplicada - IITA 2025. Prof. Nicolás Martinelli.
+Desarrollado por: Federico Casoni en el curso "Introducción a la programación en Python" en el Instituto de Innovación y Tecnología Aplicada - IITA Prof. Nicolás Martinelli. Salta - 2025
 
 
 La Plataforma Interactiva es una herramienta digital diseñada para enriquecer la experiencia de los asistentes al festival cinematográfico **29º Semana de Cine en Salta.**
