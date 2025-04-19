@@ -42,16 +42,16 @@ html, body {
   background-color: #DE5C9D;
   margin-bottom: 50px;
   padding: 10px;
-  border-radius: 1rem;
+  border-radius: 10px;
   box-sizing: border-box;
   
 }
 
 .titulo_trivia1 {
-  background-color: #E89C31;
+  background-color: #f8d53d;
   margin-bottom: 50px;
   padding: 10px;
-  border-radius: 1rem;
+  border-radius: 10px;
   box-sizing: border-box;
   
 }
@@ -60,7 +60,7 @@ html, body {
   background-color: #CB38EA;
   margin-bottom: 50px;
   padding: 10px;
-  border-radius: 1rem;
+  border-radius: 10px;
   box-sizing: border-box;
   
 }
