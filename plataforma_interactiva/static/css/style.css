@@ -33,6 +33,17 @@ html, body {
   font-size:larger !important;
 }
 
+.pregunta2 {
+  font-size: medium !important;
+  padding: 5px;
+  /* border: solid 2px white; */
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+}
+
+
 .imagen img {
   max-width: 100%;
   height: auto;
@@ -40,7 +51,7 @@ html, body {
 
 .titulo_trivia {
   background-color: #DE5C9D;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
   box-sizing: border-box;

@@ -23,19 +23,16 @@
         {% if estado == "sin_preguntas" %}  
           <h2 class="mb-4">⚠️ No hay preguntas</h2>
           <a href="/" class="btn btn-primary btn-lg w-100 mt-3">Volver al menú</a>
-        
-          {% comment %} Mensaje final {% endcomment %}
-          {% elif estado == "resumen" %}
+
+        {% elif estado == "resumen" %}
 
           <h2 class="mb-4">¡Terminaste la trivia!</h2>
           <p class="lead">Respondiste correctamente <strong>{{ score }}</strong> de <strong>{{ total }}</strong> preguntas.</p>
-          
 
           {% comment %} Mensaje sobre el puntaje final {% endcomment %}
-          
-          {% if total <= 4 %}
+          {% if score <= 4 %}
             <p class="resp_trivia">😭 ¡Ni suerte tuviste!</p>
-          {% elif total <= 8 %}
+          {% elif score <= 8 %}
             <p class="resp_trivia">😏 Se nota que algo sabes</p>
           {% else %}
             <p class="resp_trivia">¡Eres una eminencia del cine salteño! 🎬 </p>
@@ -49,61 +46,58 @@
         {% else %}
 
         <div class="titulo_trivia">
-          <h2 class="mb-0">¿Cúanto sabes de cine salteño? 🎬</h2>
+          <h2 class="mb-0">¿Cuánto sabes de cine salteño? 🎬</h2>
         </div>
 
+        {% if pregunta %}
+          <h3 class="pregunta2 mb-4">Pregunta: {{ pregunta.id }}/12</h3>
+          <h3 class="pregunta mb-4">{{ pregunta.texto }}</h3>
 
-        {% comment %} pregunta {% endcomment %}
-          {% if pregunta %}
-            <h3 class="pregunta mb-4">{{ pregunta.texto }}</h3>
+          <img
+            src="{% static 'img/' %}{{ pregunta.id }}.png"
+            alt="Imagen trivia {{ pregunta.id }}"
+            class="img-fluid mb-4"
+            style="max-height:250px;"
+          >
 
-            
-        {% comment %} foto con id de pregunta {% endcomment %}
-            <img
-              src="{% static 'img/' %}{{ pregunta.id }}.png"
-              alt="Imagen trivia {{ pregunta.id }}"
-              class="img-fluid mb-4"
-              style="max-height:250px;"
-            >
-
-            <form method="post">
-              {% csrf_token %}
-              <div class="d-grid gap-2">
-                {% for opcion in pregunta.opciones.all %}
-                  <button
-                    type="submit"
-                    name="opcion"
-                    value="{{ opcion.id }}"
-                    class="btn btn-lg w-100 {% cycle 'btn-primary' 'btn-success' 'btn-warning text-dark' 'btn-info text-dark' %}"
-                  >
-                    {{ opcion.texto }}
-                  </button>
-                {% endfor %}
-              </div>
-            </form>
-          {% endif %}
-
-          {% if correcta is not none %}
-            <div class="mt-4">
-              {% if correcta %}
-                <p class="fs-4"><strong>😎 ¡Respuesta correcta!</strong></p>
-              {% else %}
-                <p class="fs-4"><strong>👎 Respuesta incorrecta</strong></p>
-                {% if mensaje_error %}
-                  <p class="mensaje-error mt-2"><strong>{{ mensaje_error }}</strong></p>
-                {% endif %}
-              {% endif %}
+          <form method="post">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+              {% for opcion in pregunta.opciones.all %}
+                <button
+                  type="submit"
+                  name="opcion"
+                  value="{{ opcion.id }}"
+                  class="btn btn-lg w-100 {% cycle 'btn-primary' 'btn-success' 'btn-warning text-dark' 'btn-info text-dark' %}"
+                >
+                  {{ opcion.texto }}
+                </button>
+              {% endfor %}
             </div>
+          </form>
+        {% endif %}
 
-            <div class="d-grid gap-2 mt-4">
-              {% if siguiente_id %}
-                <a href="{% url 'trivia:pregunta' siguiente_id %}" class="btn btn-outline-light btn-lg w-100">Siguiente pregunta</a>
-              {% else %}
-                <a href="{% url 'trivia:resumen' %}" class="btn btn-success btn-lg w-100">Ver resultado</a>
+        {% if correcta is not none %}
+          <div class="mt-4">
+            {% if correcta %}
+              <p class="fs-4"><strong>😎 ¡Respuesta correcta!</strong></p>
+            {% else %}
+              <p class="fs-4"><strong>👎 Respuesta incorrecta</strong></p>
+              {% if mensaje_error %}
+                <p class="mensaje-error mt-2"><strong>{{ mensaje_error }}</strong></p>
               {% endif %}
-              <a href="/" class="btn btn-outline-light btn-lg w-100">Volver al menú</a>
-            </div>
-          {% endif %}
+            {% endif %}
+          </div>
+
+          <div class="d-grid gap-2 mt-4">
+            {% if siguiente_id %}
+              <a href="{% url 'trivia:pregunta' siguiente_id %}" class="btn btn-outline-light btn-lg w-100">Siguiente pregunta</a>
+            {% else %}
+              <a href="{% url 'trivia:resumen' %}" class="btn btn-success btn-lg w-100">Ver resultado</a>
+            {% endif %}
+            <a href="/" class="btn btn-outline-light btn-lg w-100">Volver al menú</a>
+          </div>
+        {% endif %}
 
         {% endif %}
       </div>
