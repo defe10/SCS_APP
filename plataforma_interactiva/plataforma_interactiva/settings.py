@@ -84,10 +84,21 @@ WSGI_APPLICATION = 'plataforma_interactiva.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {              # <------- esto lo voy a tener que modificar para pasar a otra base de datos
+# DATABASES = {              # <------- esto lo voy a tener que modificar para pasar a otra base de datos
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'scs_db',
+        'USER': 'scs_user',
+        'PASSWORD': 'has2001640guell',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
