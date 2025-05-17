@@ -1,0 +1,148 @@
+html, body {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hero {
+  background-color: #2f354a;
+}
+
+.contenido {
+  background-color: #2f354a;
+}
+
+
+.titulo h1 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  padding-left: 20px;
+  line-height: 0.9;
+}
+
+.titulo h2 {
+  text-align: left;
+  font-weight: lighter;
+  font-size: 40px;
+  padding-left: 20px;
+}
+
+.pregunta {
+  font-size:larger !important;
+}
+
+.pregunta2 {
+  font-size: medium !important;
+  padding: 5px;
+  /* border: solid 2px white; */
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+}
+
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+.titulo_trivia {
+  background-color: #DE5C9D;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+}
+
+.titulo_trivia1 {
+  background-color: #f8d53d;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+}
+
+.titulo_trivia2 {
+  background-color: #CB38EA;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+}
+
+.titulo_trivia h2 {
+  line-height: 1;
+  
+}
+
+.cuadro {
+  max-width: 300px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+.opciones a {
+  margin-bottom: 5px;
+}
+
+.pregunta {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: white;
+}
+
+
+
+.btn-lg {
+  font-size: 1rem !important;
+  padding: 0.8rem !important;
+  line-height: 0.5 !important;
+  border-radius: 0.75rem;
+}
+
+a {
+  z-index: 10;
+  position: relative;
+}
+
+a.btn {
+  z-index: 10;
+  position: relative;
+}
+
+.contenido {
+  position: relative;
+  z-index: 5;
+}
+
+.mensaje-error {
+  color: #07E066;
+  font-size: 1.1rem;
+}
+
+.resp_trivia {
+  color: #07E066 ;
+  font-size:x-large;
+  font-weight: 600;
+}
+
+/* En móvil: sin bordes ni margen */
+@media (min-width: 768px) {
+  .contenido {
+  max-width: 500px;
+  max-height: 1000px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  } 
+}
