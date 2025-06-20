@@ -1,15 +1,21 @@
+# Datos sensibles
 datos.json
 db.sqlite3
-# Byte-compiled / optimized / DLL files
+
+# Configuración local
+plataforma_interactiva/settings/settings_local.py
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
-.Python
+# Entornos virtuales
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
+# Archivos generados
+staticfiles/

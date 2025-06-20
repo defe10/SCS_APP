@@ -26,3 +26,4 @@ urlpatterns = [
     path('votacion/', include('votacion.urls', namespace='votacion')),
     path('encuesta/', include('encuesta.urls', namespace='encuesta')),
 ]
+
